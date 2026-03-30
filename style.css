@@ -1,0 +1,38 @@
+body{
+font-family:Arial;
+text-align:center;
+}
+
+#searchBar{
+width:300px;
+padding:10px;
+margin:20px;
+}
+
+.products{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.product{
+border:1px solid #050303;
+padding:20px;
+margin:10px;
+width:200px;
+}
+button{
+    background:green;
+    color:white;
+    padding:10px;
+    border:none;
+    border-radius: 8px;
+}
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 50px;
+}
+p{
+ background-color: rgb(226, 223, 43);
+}

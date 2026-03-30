@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Payment</title>
+</head>
+<body>
+
+<h2>Payment Page</h2>
+
+<p id="amount"></p>
+
+<button onclick="payNow()">Pay Now</button>
+
+<script>
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let total = 0;
+
+cart.forEach(item => {
+  total += item.price * item.quantity;
+});
+
+document.getElementById("amount").innerText = "Total Amount: ₹" + total;
+
+function payNow() {
+  alert("Payment Successful ✅");
+  localStorage.removeItem("cart");
+  window.location.href = "cart.html"; // back to home
+}
+</script>
+
+</body>
+</html>
+
+</div>
+<div class="products" id="productList">
+<div1 id="paypal-button-container">
+</div1>
+</div>
+<script src="script.js"></script>
+<script src="https://www.paypal.com/sdk/js?client-id=ARbwWS-HDyp5fgllql68RKeR3gKL7R5fNr35BJGXX-FaA9J7jFLxJ5wTr39QOhoitINy7TdNG8GoYPba"></script>
+<script src="payment.js"></script>
+</body>
+</html>
